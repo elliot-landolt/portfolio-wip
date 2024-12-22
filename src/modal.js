@@ -23,6 +23,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+// remove modal if on outside
 modal.addEventListener("click", function(e) {
   if (e.target === modal) {
     modal.style.display = "none";

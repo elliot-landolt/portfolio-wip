@@ -75,7 +75,7 @@ window.onwheel = e => {
     fill: "forwards"});
   
   // Animate object-position of images
-  for(const image of track.getElementsByClassName("image")){
+  for(const image of track.getElementsByClassName("track-image")){
     image.animate({
       objectPosition: `${100 + nextPercentage}% center`
     }, 

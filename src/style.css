@@ -31,7 +31,7 @@ footer .custom-link:hover {
   color: white; /* Optional: Change this color when the link is hovered */
 }
 
-#image-track > .image {
+#image-track > .track-image {
   width: 40vmin;
   height:  56vmin;
   object-fit: cover;
