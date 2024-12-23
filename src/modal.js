@@ -3,14 +3,16 @@
 // Get the modal
 var modal = document.getElementById("expand-modal");
 
-var images = document.querySelectorAll("track-image");
+var images = document.querySelectorAll(".track-image");
 var modalImg = document.getElementById("modal-image");
 var captionText = document.getElementById("modal-caption");
 
 images.forEach(function(img) {
     img.addEventListener("click", function() {
-      modal.style.display = "block";
+      console.log(img)
+      modal.style.display = "flex";
       modalImg.src = this.src;
+      console.log(modalImg.src)
       captionText.innerHTML = this.alt; // write the code here to paste the correct text
     }
 )});

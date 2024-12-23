@@ -9,8 +9,8 @@
   </head>
   <body>
 
-    <h1> Elliot Landolt </h1>
-    <div id="image-track"  data-mouse-down-at="0" data-prev-percentage="0">
+    <h1 id="header" class="hidden"> Elliot Landolt </h1>
+    <div class="image-hidden" id="image-track"  data-mouse-down-at="0" data-prev-percentage="0">
       <img class="track-image" id="elliot1" src="/images/elliot1.JPG" draggable="false">
       <img class="track-image" id="elliot2" src="/images/elliot2.JPG" draggable="false">
       <img class="track-image" id="elliot3" src="/images/elliot3.JPG" draggable="false">
@@ -19,12 +19,12 @@
       <img class="track-image" id="elliot6" src="/images/elliot6.JPG" draggable="false">
     </div>
     <script type="module" src="/main.js"></script>
-    <!-- <script type="module" src="/modal.js"></script> -->
-  
+    <script type="module" src="/modal.js"></script>
+    <script defer src="/flyin.js"></script>
     <div id="expand-modal" class="modal" data-modal-selection="">
       <span class="close">&times;</span>
 
-      <img class="modal-image" src="" draggable="false">
+      <img class="modal-image" id="modal-image" src="" draggable="false">
 
       <div id="modal-caption"></div>
       
@@ -35,6 +35,6 @@
   </body>
 
   <footer>
-    <a class="custom-link" href="https://github.com/elliot-landolt">Github</a>
+    <a id="git" class="custom-link-hide" href="https://github.com/elliot-landolt">Github</a>
   </footer>
 </html>

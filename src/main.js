@@ -4,7 +4,6 @@ const track = document.querySelector("#image-track");
 
 window.handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
-
 window.handleOnUp = () => {
   track.dataset.mouseDownAt = "0";
   track.dataset.prevPercentage = track.dataset.percentage;
@@ -53,11 +52,9 @@ window.onwheel = e => {
   let delta;
   if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
     delta = e.deltaX * 0.1;
-    console.log('x', delta)
   } else {
     // Use deltaY for vertical scroll (if needed, you can adjust delta scaling)
     delta = e.deltaY * .05;
-    console.log('y', delta)
   }
 
   // Compute the new percentage position
