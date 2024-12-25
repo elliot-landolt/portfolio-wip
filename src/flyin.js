@@ -1,16 +1,13 @@
 window.addEventListener('load', function() {
     const header = document.querySelector("#header")
-    const footer = document.querySelector("#git")
     const links = Array.from(document.getElementsByClassName("custom-link-hide"));
     const track = document.querySelector("#image-track");
 
     setTimeout(() => {
         switchClasses(header, 'hidden', 'show');
         links.forEach(link => {
-            console.log(link); // Log each link
             switchClasses(link, 'custom-link-hide', 'custom-link-show');
         });
-        // switchClasses(footer, 'custom-link-hide','custom-link-show');
         image(track)
     }, 1000);
 });
