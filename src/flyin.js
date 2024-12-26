@@ -1,3 +1,5 @@
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 window.addEventListener('load', function() {
     const header = document.querySelector("#header")
     const links = Array.from(document.getElementsByClassName("custom-link-hide"));
@@ -5,6 +7,7 @@ window.addEventListener('load', function() {
 
     setTimeout(() => {
         switchClasses(header, 'hidden', 'show');
+        cipherName();
         links.forEach(link => {
             switchClasses(link, 'custom-link-hide', 'custom-link-show');
         });
@@ -32,4 +35,19 @@ function image(track) {
                 fill: "forwards"});
         }, 150 * index);
     }
+}
+
+function cipherName() {
+    let iterations = 0;
+    const interval = setInterval(() => {
+        header.innerText = header.innerText.split("")
+        .map((letter, index) => {
+            if (index < iterations) {
+                return header.dataset.value[index];
+            }
+            return letters[Math.floor(Math.random() * 26)]})
+        .join("");
+        if(iterations >= header.dataset.value.length) clearInterval(interval);
+        iterations += 1/2;
+    }, 30);
 }
